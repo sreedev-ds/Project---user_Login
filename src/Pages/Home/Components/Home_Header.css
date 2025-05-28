@@ -1,0 +1,14 @@
+.custom-hr {
+  all: unset;               
+  display: block;
+  height: 2px;             
+  width: 100%;              
+  background-color: black;  
+  margin: 0;                
+}
+
+.btn-transparent {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
