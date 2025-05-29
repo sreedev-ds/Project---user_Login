@@ -1,19 +1,34 @@
 import Card from "react-bootstrap/Card";
+import './CountryCard.css'
 
 function CountryCard({ country }) {
   return (
-    <Card className="mb-3" style={{ width: "18rem" }}>
+    <div>
+      <div>
+      
+    <Card className="custom-shadow rounded-0" >
+      <div className='d-flex pt-2'>
+      <div>
       <Card.Img
+      
         variant="top"
         src={country.flag}
         alt={country.name}
-        style={{ height: "160px", objectFit: "cover" }}
-      />
+        style={{ height:80,  objectFit: "cover" }}
+      className="rounded-0" />
+      </div>
+      <div>
+      
       <Card.Body>
-        <Card.Title>{country.name}</Card.Title>
+        <Card.Title className="fw-semibold">{country.name}</Card.Title>
         <Card.Text>{country.region}</Card.Text>
       </Card.Body>
+      </div>
+      </div>
     </Card>
+    </div>
+
+    </div>
   );
 }
 

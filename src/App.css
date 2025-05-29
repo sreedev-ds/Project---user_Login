@@ -1,0 +1,47 @@
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.custom-header,
+.custom-footer {
+  flex-shrink: 0;
+  background-color: #f8f9fa;
+}
+
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.filter-btn {
+  all: unset;
+  color: black !important;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px 8px;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.filter-btn:hover {
+  text-decoration: underline !important;
+}
+
+.filter-btn.active {
+  text-decoration: underline !important;
+}
+

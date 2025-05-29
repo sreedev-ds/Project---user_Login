@@ -24,10 +24,6 @@
 
         </Row>
 
-        
-        
-
-
 </div>
     <div >
             <Row className="justify-content-center my-3">

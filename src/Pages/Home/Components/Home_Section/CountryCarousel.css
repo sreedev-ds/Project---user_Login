@@ -1,0 +1,46 @@
+.carousel-wrapper {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.custom-carousel .carousel-inner {
+  overflow: visible;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row; 
+}
+
+.carousel-main {
+  width: 75%;
+}
+
+.carousel-preview {
+  width: 25%;
+  opacity: 0.6;
+}
+
+.slide-image {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+
+@media (max-width: 576px) {
+  .carousel-slide {
+    flex-direction: column;
+  }
+
+  .carousel-main,
+  .carousel-preview {
+    width: 100%;
+  }
+}

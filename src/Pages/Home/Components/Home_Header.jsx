@@ -1,50 +1,46 @@
-import {Row, Col, Button} from 'react-bootstrap'
-import './Home_Header.css'
-
+import { Row, Col, Container } from 'react-bootstrap';
+import './Home_Header.css';
+import FilterButtons from "./Home_Section/FilterButtons.jsx";
+import CountryCarousel from './Home_Section/CountryCarousel.jsx';
 
 function Home_Header() {
   return (
-    <div>
-        <div className='d-flex flex-row justify-content-between'>
-        <div>
-            <h6>
-                Countries
-            </h6>
-        </div>
-        <div>
- <Button variant="light" className="btn-transparent">All</Button>
-<Button variant="light" className="btn-transparent">Asia</Button>
-<Button variant="light" className="btn-transparent">Europe</Button>
-        </div>
+    <Container fluid>
+      
+      <Row className="justify-content-between align-items-center">
+        <Col xs="auto">
+          <h6>Countries</h6>
+        </Col>
+        <Col xs="auto">
+          <FilterButtons />
+        </Col>
+      </Row>
 
-
-
-        </div>
-        <div className='text-center my-3'>
-        <Row className='align-items-center'>
-            <Col className="pt-1 mt-0">
-            
-                <hr  className='mt-0 mb-3 custom-hr'/>
-            </Col>
-            <Col  xs='auto'>
-            <span >WELCOME</span>
-
-            </Col>
-
-            <Col  className='pt-1'>
-            <hr className='mt-2 custom-hr'/>
-            </Col>
-
-
-
-        </Row>
-
+     
+      <div className="welcome-container text-center my-3">
         
+        <div className="d-flex d-md-none flex-column align-items-center">
+          <hr className="custom-hr w-100 mb-2" />
+          <span className="welcome-text">WELCOME</span>
+          <hr className="custom-hr w-100 mt-2" />
         </div>
 
-        
-    </div>
-  )
+       
+        <div className="d-none d-md-flex justify-content-center welcome-inline">
+          <div className="flex-grow-1 d-flex align-items-start">
+            <hr className="custom-hr hr-top" />
+          </div>
+          <span className="welcome-text mx-3 align-self-center">WELCOME</span>
+          <div className="flex-grow-1 d-flex align-items-end">
+            <hr className="custom-hr hr-bottom" />
+          </div>
+        </div>
+      </div>
+
+      
+      <CountryCarousel />
+    </Container>
+  );
 }
 
-export default Home_Header
+export default Home_Header;
